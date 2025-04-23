@@ -8,22 +8,22 @@ export default function AppLayout() {
             <nav>
                 <ul>
                 <li>
-                    <NavLink to={ROUTES.vorratRoute()}>
+                    <NavLink to={ROUTES.stockRoute()}>
                         Vorrat
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to={ROUTES.rezepteRoute()}>
+                    <NavLink to={ROUTES.categoriesRoute()}>
                         Rezepte
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to={ROUTES.hinzufuegenRoute()}>
+                    <NavLink to={ROUTES.addRecipeRoute()}>
                         Rezept hinzufügen
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to={ROUTES.sucheRoute()}>
+                    <NavLink to={ROUTES.searchRoute()}>
                         Suche
                     </NavLink>
                 </li>
