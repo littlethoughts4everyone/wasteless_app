@@ -2,10 +2,12 @@ import react from "react";
 import NewStockItemForm from "../../components/NewStockItemForm";
 import { useSelector } from "react-redux";
 import {selectAllStock} from "./stockSlice";
+import { selectFoodItem } from "../foodItem/foodItemSlice";
 
 export default function Stock() {
 
     const stock = useSelector(selectAllStock);
+    const foodItem = useSelector(selectFoodItem(id));
 
     return (
         <div>
