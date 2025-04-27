@@ -10,34 +10,34 @@ export default function Stock() {
     return (
         <div>
             <section className="stock-form">
-                <h1>Lebensmittel hinzufügen</h1>
+                <h1>Add food items:</h1>
                 <NewStockItemForm/>
             </section>
             <section className="stock-container">
-                <h1>Vorrat</h1>
+                <h1>Stock:</h1>
                 <div className="stock-category">
-                    <h2>Fleisch/Fisch</h2>
+                    <h2>Meat/Fish:</h2>
                 </div>
                 <div className="stock-category">
-                    <h2>Gemüse/Obst</h2>
+                    <h2>Vegetables/Fruits:</h2>
                 </div>
                 <div className="stock-category">
-                    <h2>Molkereiprodukte</h2>
+                    <h2>Dairy:</h2>
                 </div>
                 <div className="stock-category">
-                    <h2>Konserven</h2>
+                    <h2>Canned Goods:</h2>
                 </div>
                 <div className="stock-category">
-                    <h2>Grundnahrungsmittel</h2>
+                    <h2>Basic Foods:</h2>
                 </div>
                 <div className="stock-category">
-                    <h2>Gewürze</h2>
+                    <h2>Spices:</h2>
                 </div>
                 <div className="stock-category">
-                    <h2>Saucen</h2>
+                    <h2>Sauces:</h2>
                 </div>
                 <div className="stock-category">
-                    <h2>Getränke/Spirituosen</h2>
+                    <h2>Beverages/Spirits:</h2>
                 </div>
             </section>
         </div>
