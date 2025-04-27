@@ -1,13 +1,23 @@
 export const FOOD_CATEGORIES = [
-    Fleisch/Fisch,
-    Gemüse/Obst,
-    Molkereiprodukte,
-    Konserven,
-    Grundnahrungsmittel,
-    Gewürze,
-    Saucen,
-    Getränke/Spirituosen
+    meat/fish,
+    vegetables/fruits,
+    dairy,
+    canned food,
+    basic foods,
+    spices,
+    sauces,
+    beverages
 ];
+
+export const FOOD_UNITS = [
+    gram,
+    kilogram,
+    milliliter,
+    liter,
+    tablespoon,
+    teaspoon,
+    bunch
+]
 
 export const RECIPE_CATEGORIES = [
     Aufläufe,
