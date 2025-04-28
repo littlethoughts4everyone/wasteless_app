@@ -1,7 +1,7 @@
 import react, {useState} from "react";
 import { useDispatch, useDispatch } from "react-redux";
 import {v4 as uuidv4} from "uuid";
-import { addFoodItem } from "../features/foodItem/foodItemSlice";
+import { addStockItem } from "../features/stockItem/stockItemsSlice";
 import { FOOD_CATEGORIES } from "../data/foodData";
 import { FOOD_UNITS } from "../data/foodData";
 
@@ -19,7 +19,7 @@ export default function NewStockItemForm() {
             return;
         };
 
-        dispatch(addFoodItem({
+        dispatch(addStockItem({
             id: itemId,
             amount: amount,
             unit: unit,
