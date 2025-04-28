@@ -1,12 +1,12 @@
 import react from "react";
 import NewStockItemForm from "../../components/NewStockItemForm";
 import { useSelector } from "react-redux";
-import { selectStockItem } from "./stockItemsSlice";
+import { selectAllStockItems } from "./stockItemsSlice";
+import StockItem from "./StockItem";
 
 export default function Stock() {
 
-    const stock = useSelector(selectAllStock);
-    const foodItem = useSelector(selectStockItem(id));
+    const stockItems = useSelector(selectAllStockItems);
 
     return (
         <div>
@@ -17,13 +17,17 @@ export default function Stock() {
             <section className="stock-container">
                 <h1>Stock:</h1>
                 <div className="stock-category">
-                    <h2>Meat/Fish:</h2>
+                    <h2>Meat &sol Fish:</h2>
                     <div id="meatfish">
-
+                        <ul>
+                            {Object.values(stockItems).map((stockItem) => (
+                                    <StockItem/>
+                                ))}
+                        </ul>
                     </div>
                 </div>
                 <div className="stock-category">
-                    <h2>Vegetables/Fruits:</h2>
+                    <h2>Vegetables &sol Fruits:</h2>
                     <div id="vegetablesfruits">
 
                     </div>
