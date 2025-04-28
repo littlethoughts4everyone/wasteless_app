@@ -1,7 +1,7 @@
 import react, {useState} from "react";
 import { useDispatch, useDispatch } from "react-redux";
 import {v4 as uuidv4} from "uuid";
-import { addStockItem } from "../features/stockItem/stockItemsSlice";
+import { addStockItem } from "../features/stock/stockItemsSlice";
 import { FOOD_CATEGORIES } from "../data/foodData";
 
 export default function NewStockItemForm() {

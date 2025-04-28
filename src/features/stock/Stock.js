@@ -1,8 +1,7 @@
 import react from "react";
 import NewStockItemForm from "../../components/NewStockItemForm";
 import { useSelector } from "react-redux";
-import {selectAllStock} from "./stockSlice";
-import { selectStockItem } from "../stockItem/stockItemsSlice";
+import { selectStockItem } from "./stockItemsSlice";
 
 export default function Stock() {
 
