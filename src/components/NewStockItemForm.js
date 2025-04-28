@@ -1,5 +1,5 @@
 import react, {useState} from "react";
-import { useDispatch, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import {v4 as uuidv4} from "uuid";
 import { addStockItem } from "../features/stock/stockItemsSlice";
 import { FOOD_CATEGORIES } from "../data/foodData";
@@ -14,7 +14,7 @@ export default function NewStockItemForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (amount.length === 0 || category.length === 0 || item.length === 0) {
+        if (amount.length === 0 || category.length === 0 || name.length === 0) {
             return;
         };
 
