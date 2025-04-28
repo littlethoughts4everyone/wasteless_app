@@ -1,6 +1,6 @@
 export const FOOD_CATEGORIES = [
-    meat/fish,
-    vegetables/fruits,
+    meat,
+    vegetables,
     dairy,
     canned food,
     basic foods,
