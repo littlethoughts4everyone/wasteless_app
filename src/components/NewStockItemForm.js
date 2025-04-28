@@ -9,7 +9,7 @@ export default function NewStockItemForm() {
     const [amount, setAmount] = useState("");
     const [unit, setUnit] = useState("");
     const [category, setCategory] = useState("");
-    const [item, setItem] = useState("");
+    const [name, setName] = useState("");
     const itemId = uuidv4();
 
     const handleSubmit = (e) => {
@@ -23,7 +23,7 @@ export default function NewStockItemForm() {
             amount: amount,
             unit: unit,
             category: category,
-            item: item
+            name: name
         }));
     };
 
@@ -62,10 +62,10 @@ export default function NewStockItemForm() {
                         ))}
                     </select>
                     <input
-                    id="item"
+                    id="name"
                     type="text"
-                    value={item}
-                    onChange={(e) => setItem(e.currentTarget.value)}
+                    value={name}
+                    onChange={(e) => setName(e.currentTarget.value)}
                     placeholder="Item Name"
                     required/>
                 </div>
