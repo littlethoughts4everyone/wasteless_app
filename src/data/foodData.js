@@ -9,16 +9,6 @@ export const FOOD_CATEGORIES = [
     beverages
 ];
 
-export const FOOD_UNITS = [
-    gram,
-    kilogram,
-    milliliter,
-    liter,
-    tablespoon,
-    teaspoon,
-    bunch
-]
-
 export const RECIPE_CATEGORIES = [
     Aufläufe,
     Currys,
