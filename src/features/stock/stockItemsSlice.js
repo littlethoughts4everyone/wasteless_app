@@ -7,13 +7,13 @@ export const stockItemsSlice = createSlice({
     },
     reducers: {
         addStockItem: (state, action) => {
-            const {id, amount, unit, category, item} = action.payload;
+            const {id, amount, unit, category, name} = action.payload;
             state.stockItems[id] = {
                 id: id,
                 amount: amount,
                 unit: unit,
                 category: category,
-                item: item
+                name: name
             };
         }
     }
