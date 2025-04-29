@@ -17,7 +17,7 @@ export const stockItemsSlice = createSlice({
             };
         }
     }
-})
+});
 
 export const selectAllStockItems = (state) => state.allStockItems.stockItems;
 export const { addStockItem } = stockItemsSlice.actions;
