@@ -1,22 +1,22 @@
 export const FOOD_CATEGORIES = [
-    'meat/fish',
-    'vegetables/fruits',
-    'dairy',
-    'canned food',
-    'basic foods',
-    'spices',
-    'sauces',
-    'beverages'
+    'Meat / Fish',
+    'Vegetables / Fruits',
+    'Dairy',
+    'Canned Food',
+    'Basic Foods',
+    'Spices',
+    'Sauces',
+    'Beverages'
 ];
 
 export const RECIPE_CATEGORIES = [
-    'Aufläufe',
+    'Casseroles',
     'Currys',
-    'Fleischgerichte',
-    'Fischgerichte',
-    'Nudelgerichte',
+    'Meat Dishes',
+    'Fish Dishes',
+    'Pasta Dishes',
     'Pizza',
     'Risottos',
-    'Suppen',
-    'Vorspeisen'
+    'Soupes',
+    'Appetizers'
 ];
