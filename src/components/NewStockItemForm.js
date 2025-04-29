@@ -1,22 +1,27 @@
 import react, {useState} from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import {v4 as uuidv4} from "uuid";
+import ROUTES from "../app/routes";
 import { addStockItem } from "../features/stock/stockItemsSlice";
 import { FOOD_CATEGORIES } from "../data/foodData";
 
 export default function NewStockItemForm() {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const [amount, setAmount] = useState("");
     const [unit, setUnit] = useState("");
     const [category, setCategory] = useState("");
     const [name, setName] = useState("");
-    const itemId = uuidv4();
 
     const handleSubmit = (e) => {
+
         e.preventDefault();
         if (amount.length === 0 || category.length === 0 || name.length === 0) {
             return;
         };
+
+        const itemId = uuidv4();
 
         dispatch(addStockItem({
             id: itemId,
@@ -25,6 +30,8 @@ export default function NewStockItemForm() {
             category: category,
             name: name
         }));
+
+       navigate(ROUTES.stockRoute());
     };
 
     return (
@@ -55,7 +62,7 @@ export default function NewStockItemForm() {
                     <select
                     onChange={(e) => setCategory(e.currentTarget.value)}
                     required>
-                        {FOOD_CATEGORIES.map(({name}) => (
+                        {FOOD_CATEGORIES.map((name) => (
                             <option key={name} value={name}>
                                 {name}
                             </option>
@@ -68,6 +75,7 @@ export default function NewStockItemForm() {
                     onChange={(e) => setName(e.currentTarget.value)}
                     placeholder="Item Name"
                     required/>
+                    <button className="submit-button" type="submit">Add Food Item</button>
                 </div>
             </form>
         </section>
