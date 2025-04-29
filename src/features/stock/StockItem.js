@@ -10,13 +10,11 @@ export default function StockItem() {
     }
 
     return (
-        <li>
-            <div className="stock-item">
-                <p className="item-amount">{stockItems.amount}</p>
-                <p className="item-unit">{stockItems.unit}</p>
-                <p className="item-name">{stockItems.name}</p>
-                <button>X</button>
-            </div>
-        </li>
+        <div className="stock-item">
+            <p className="item-amount">{stockItems.amount}</p>
+            <p className="item-unit">{stockItems.unit}</p>
+            <p className="item-name">{stockItems.name}</p>
+            <button>X</button>
+        </div>
     );
 }
