@@ -2,7 +2,6 @@ import react, {useState} from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import {v4 as uuidv4} from "uuid";
-import ROUTES from "../app/routes";
 import { addStockItem } from "../features/stock/stockItemsSlice";
 import { FOOD_CATEGORIES } from "../data/foodData";
 
@@ -17,7 +16,7 @@ export default function NewStockItemForm() {
     const handleSubmit = (e) => {
 
         e.preventDefault();
-        if (amount.length === 0 || category.length === 0 || name.length === 0) {
+        if (category.length === 0 || name.length === 0) {
             return;
         };
 
@@ -31,7 +30,10 @@ export default function NewStockItemForm() {
             name: name
         }));
 
-       navigate(ROUTES.stockRoute());
+       setAmount("");
+       setUnit("");
+       setCategory("");
+       setName("");
     };
 
     return (
@@ -43,25 +45,28 @@ export default function NewStockItemForm() {
                     type="number"
                     value={amount}
                     onChange={(e) => setAmount(e.currentTarget.value)}
-                    placeholder="Amount"
-                    required/>
+                    placeholder="Amount"/>
                     <select
+                    value={unit}
                     onChange={(e) => setUnit(e.currentTarget.value)}
                     required
-                    defaultValue="default">
-                        <option value="default" disabled hidden>Unit</option>
+                    defaultValue="">
+                        <option value="" disabled hidden>Unit</option>
                         <option></option>
-                        <option>gram</option>
-                        <option>milliliter</option>
+                        <option>g</option>
+                        <option>ml</option>
                         <option>tablespoon</option>
                         <option>teaspoon</option>
-                        <option>kilogram</option>
-                        <option>liter</option>
+                        <option>kg</option>
+                        <option>l</option>
                         <option>bunch</option>
                     </select>
                     <select
+                    value={category}
                     onChange={(e) => setCategory(e.currentTarget.value)}
-                    required>
+                    required
+                    defaultValue="">
+                        <option value="" disabled hidden>Category</option>
                         {FOOD_CATEGORIES.map((name) => (
                             <option key={name} value={name}>
                                 {name}
