@@ -1,19 +1,12 @@
 import react from "react";
-import { useSelector } from "react-redux";
-import {selectAllStockItems} from "./stockItemsSlice";
 
-export default function StockItem() {
-    const stockItems = useSelector(selectAllStockItems);
-
-    if(!stockItems) {
-        return null;
-    }
+export default function StockItem({amount, unit, name}) {
 
     return (
         <div className="stock-item">
-            <p className="item-amount">{stockItems.amount}</p>
-            <p className="item-unit">{stockItems.unit}</p>
-            <p className="item-name">{stockItems.name}</p>
+            <p className="item-amount">{amount}</p>
+            <p className="item-unit">{unit}</p>
+            <p className="item-name">{name}</p>
             <button>X</button>
         </div>
     );
