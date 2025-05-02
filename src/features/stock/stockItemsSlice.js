@@ -15,11 +15,16 @@ export const stockItemsSlice = createSlice({
                 category: category,
                 name: name
             };
+        },
+        deleteStockItem: (state, action) => {
+            const id = action.payload;
+            delete state.stockItems[id];
         }
     }
 });
 
 export const selectAllStockItems = (state) => state.allStockItems.stockItems;
-export const { addStockItem } = stockItemsSlice.actions;
+export const selectStockItem = (id) => (state) => state.allStockItems.stockItems[id];
+export const { addStockItem, deleteStockItem } = stockItemsSlice.actions;
 
 export default stockItemsSlice.reducer;

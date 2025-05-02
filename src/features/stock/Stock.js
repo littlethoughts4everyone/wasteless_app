@@ -1,12 +1,13 @@
 import react from "react";
 import NewStockItemForm from "../../components/NewStockItemForm";
 import StockItem from "./StockItem";
-import { useSelector } from "react-redux";
-import { selectAllStockItems } from "./stockItemsSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { selectAllStockItems, deleteStockItem } from "./stockItemsSlice";
 
 export default function Stock() {
 
     const stockItems = useSelector(selectAllStockItems);
+    const dispatch = useDispatch();
 
     return (
         <div>
@@ -25,6 +26,7 @@ export default function Stock() {
                             .map((stockItem) => (
                                 <li className="stock-item" key={stockItem.id}>
                                     <StockItem amount={stockItem.amount} unit={stockItem.unit} name={stockItem.name}/>
+                                    <button onClick={() => dispatch(deleteStockItem(stockItem.id))}>X</button>
                                 </li>
                             ))}
                         </ul>
@@ -39,6 +41,7 @@ export default function Stock() {
                             .map((stockItem) => (
                                 <li className="stock-item" key={stockItem.id}>
                                     <StockItem amount={stockItem.amount} unit={stockItem.unit} name={stockItem.name}/>
+                                    <button onClick={() => dispatch(deleteStockItem(stockItem.id))}>X</button>
                                 </li>
                             ))}
                         </ul>
@@ -53,6 +56,7 @@ export default function Stock() {
                             .map((stockItem) => (
                                 <li className="stock-item" key={stockItem.id}>
                                     <StockItem amount={stockItem.amount} unit={stockItem.unit} name={stockItem.name}/>
+                                    <button onClick={() => dispatch(deleteStockItem(stockItem.id))}>X</button>
                                 </li>
                             ))}
                         </ul>
@@ -67,6 +71,7 @@ export default function Stock() {
                             .map((stockItem) => (
                                 <li className="stock-item" key={stockItem.id}>
                                     <StockItem amount={stockItem.amount} unit={stockItem.unit} name={stockItem.name}/>
+                                    <button onClick={() => dispatch(deleteStockItem(stockItem.id))}>X</button>
                                 </li>
                             ))}
                         </ul>
@@ -81,6 +86,7 @@ export default function Stock() {
                             .map((stockItem) => (
                                 <li className="stock-item" key={stockItem.id}>
                                     <StockItem amount={stockItem.amount} unit={stockItem.unit} name={stockItem.name}/>
+                                    <button onClick={() => dispatch(deleteStockItem(stockItem.id))}>X</button>
                                 </li>
                             ))}
                         </ul>
@@ -95,6 +101,7 @@ export default function Stock() {
                             .map((stockItem) => (
                                 <li className="stock-item" key={stockItem.id}>
                                     <StockItem amount={stockItem.amount} unit={stockItem.unit} name={stockItem.name}/>
+                                    <button onClick={() => dispatch(deleteStockItem(stockItem.id))}>X</button>
                                 </li>
                             ))}
                         </ul>
@@ -109,6 +116,7 @@ export default function Stock() {
                             .map((stockItem) => (
                                 <li className="stock-item" key={stockItem.id}>
                                     <StockItem amount={stockItem.amount} unit={stockItem.unit} name={stockItem.name}/>
+                                    <button onClick={() => dispatch(deleteStockItem(stockItem.id))}>X</button>
                                 </li>
                             ))}
                         </ul>
@@ -123,6 +131,7 @@ export default function Stock() {
                             .map((stockItem) => (
                                 <li className="stock-item" key={stockItem.id}>
                                     <StockItem amount={stockItem.amount} unit={stockItem.unit} name={stockItem.name}/>
+                                    <button onClick={() => dispatch(deleteStockItem(stockItem.id))}>X</button>
                                 </li>
                             ))}
                         </ul>
