@@ -49,17 +49,15 @@ export default function NewStockItemForm() {
                     <select
                     value={unit}
                     onChange={(e) => setUnit(e.currentTarget.value)}
-                    required
                     defaultValue="">
                         <option value="" disabled hidden>Unit</option>
-                        <option></option>
-                        <option>g</option>
-                        <option>ml</option>
-                        <option>tablespoon</option>
-                        <option>teaspoon</option>
-                        <option>kg</option>
-                        <option>l</option>
-                        <option>bunch</option>
+                        <option value="gram">g</option>
+                        <option value="millilitre">ml</option>
+                        <option value="tablespoon">tablespoon</option>
+                        <option value="teaspoon">teaspoon</option>
+                        <option value="kilogram">kg</option>
+                        <option value="litre">l</option>
+                        <option value="bunch">bunch</option>
                     </select>
                     <select
                     value={category}
