@@ -20,3 +20,35 @@ export const RECIPE_CATEGORIES = [
     'Soupes',
     'Appetizers'
 ];
+
+export const MEAT_FISH_ITEMS = [
+
+];
+
+export const VEGETABLE_FRUIT_ITEMS = [
+
+];
+
+export const DAIRY_ITEMS = [
+
+];
+
+export const CANNED_FOOD_ITEMS = [
+
+];
+
+export const BASIC_FOOD_ITEMS = [
+
+];
+
+export const SPICES = [
+
+];
+
+export const SAUCES = [
+
+];
+
+export const BEVERAGES = [
+
+];
