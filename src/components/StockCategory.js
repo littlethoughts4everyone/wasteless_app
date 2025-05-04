@@ -40,6 +40,7 @@ export default function StockCategory({ title, items }) {
               <p className="item-name">{item.name}</p>
             </div>
             <div className="item-options">
+              {item.amount !== undefined && item.amount !== null && item.amount !== "" && (
               <form onSubmit={(e) => handleSubmit(e, item.id)}>
                 <input
                   type="number"
@@ -51,6 +52,7 @@ export default function StockCategory({ title, items }) {
                   Change
                 </button>
               </form>
+              )}
               <button onClick={() => dispatch(deleteStockItem(item.id))}>
                 X
               </button>
