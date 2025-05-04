@@ -1,13 +1,11 @@
 import react, {useState} from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import {v4 as uuidv4} from "uuid";
 import { addStockItem } from "../features/stock/stockItemsSlice";
 import { FOOD_CATEGORIES } from "../data/foodData";
 
 export default function NewStockItemForm() {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
     const [amount, setAmount] = useState("");
     const [unit, setUnit] = useState("");
     const [category, setCategory] = useState("");
@@ -51,12 +49,10 @@ export default function NewStockItemForm() {
                     onChange={(e) => setUnit(e.currentTarget.value)}
                     defaultValue="">
                         <option value="" disabled hidden>Unit</option>
-                        <option value="gram">g</option>
-                        <option value="millilitre">ml</option>
-                        <option value="tablespoon">tablespoon</option>
-                        <option value="teaspoon">teaspoon</option>
-                        <option value="kilogram">kg</option>
-                        <option value="litre">l</option>
+                        <option value="g">g</option>
+                        <option value="ml">ml</option>
+                        <option value="kg">kg</option>
+                        <option value="l">l</option>
                         <option value="bunch">bunch</option>
                     </select>
                     <select
@@ -78,8 +74,8 @@ export default function NewStockItemForm() {
                     onChange={(e) => setName(e.currentTarget.value)}
                     placeholder="Item Name"
                     required/>
-                    <button className="submit-button" type="submit">Add Food Item</button>
                 </div>
+                <button className="submit-button" type="submit">Add Food Item</button>
             </form>
         </section>
     )
