@@ -19,12 +19,18 @@ export const stockItemsSlice = createSlice({
         deleteStockItem: (state, action) => {
             const id = action.payload;
             delete state.stockItems[id];
+        },
+        changeItemAmount: (state, action) => {
+            const {id, amount} = action.payload;
+            if (state.stockItems[id]) {
+                state.stockItems[id].amount = amount;
+            };
         }
     }
 });
 
 export const selectAllStockItems = (state) => state.allStockItems.stockItems;
 export const selectStockItem = (id) => (state) => state.allStockItems.stockItems[id];
-export const { addStockItem, deleteStockItem } = stockItemsSlice.actions;
+export const { addStockItem, deleteStockItem, changeItemAmount } = stockItemsSlice.actions;
 
 export default stockItemsSlice.reducer;

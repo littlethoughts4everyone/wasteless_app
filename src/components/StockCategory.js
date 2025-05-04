@@ -1,21 +1,40 @@
-import React from "react";
+import React, {useState} from "react";
 import { useDispatch } from "react-redux";
-import { deleteStockItem } from "../features/stock/stockItemsSlice";
+import { deleteStockItem, changeItemAmount } from "../features/stock/stockItemsSlice";
 
 export default function StockCategory({ title, items }) {
   const dispatch = useDispatch();
+  const [newAmount, setNewAmount] = useState("");
 
   return (
-    <div className="stock-category">
+    <div className={title.toLowerCase().replace(/[^a-z]/g, "")}>
       <h2>{title}:</h2>
-      <div id={title.toLowerCase().replace(/[^a-z]/g, "")}>
         <ul className="items-list">
           {items.map((item) => (
             <li className="stock-item" key={item.id}>
-              <div>
+              <div className="item-info">
                 <p className="item-amount">{item.amount}</p>
                 <p className="item-unit">{item.unit}</p>
                 <p className="item-name">{item.name}</p>
+              </div>
+              <div className="item-options">
+                <form onSubmit={(e) => {
+                  e.preventDefault();
+                  if (!newAmount) return;
+                  dispatch(changeItemAmount({
+                    id: item.id,
+                    amount: newAmount
+                  }));
+                  setNewAmount("");
+                  }}>
+                  <input
+                  id="newAmount"
+                  type="number"
+                  value={newAmount}
+                  onChange={(e) => setNewAmount(e.currentTarget.value)}
+                  placeholder="New Amount"/>
+                  <button className="change-button" type="submit">Change</button>
+                </form>
                 <button onClick={() => dispatch(deleteStockItem(item.id))}>
                   X
                 </button>
@@ -23,7 +42,6 @@ export default function StockCategory({ title, items }) {
             </li>
           ))}
         </ul>
-      </div>
     </div>
   );
 }
