@@ -10,15 +10,42 @@ export const FOOD_CATEGORIES = [
 ];
 
 export const RECIPE_CATEGORIES = [
-    'Casseroles',
-    'Currys',
-    'Meat Dishes',
-    'Fish Dishes',
-    'Pasta Dishes',
-    'Pizza',
-    'Risottos',
-    'Soupes',
-    'Appetizers'
+    {
+        name: 'Casseroles',
+        id: 'casseroles',
+    },
+    {
+        name: 'Currys',
+        id: 'currys',
+    },
+    {
+        name: 'Meat',
+        id: 'meat',
+    },
+    {
+        name: 'Fish',
+        id: 'fish',
+    },
+    {
+        name: 'Pasta',
+        id: 'pasta',
+    },
+    {
+        name: 'Pizza',
+        id: 'pizza',
+    },
+    {
+        name: 'Risotto',
+        id: 'risotto',
+    },
+    {
+        name: 'Soupes',
+        id: 'soupes',
+    },
+    {
+        name: 'Appetizer',
+        id: 'appetizer',
+    }
 ];
 
 export const MEAT_FISH_ITEMS = [
