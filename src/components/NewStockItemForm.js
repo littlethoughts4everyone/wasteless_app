@@ -1,4 +1,4 @@
-import react, {useState} from "react";
+import {useState} from "react";
 import { useDispatch } from "react-redux";
 import {v4 as uuidv4} from "uuid";
 import { addStockItem } from "../features/stock/stockItemsSlice";

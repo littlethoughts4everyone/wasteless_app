@@ -1,4 +1,3 @@
-import react from "react";
 import { Link } from "react-router-dom";
 import ROUTES from "../../app/routes";
 import { RECIPE_CATEGORIES } from "../../data/foodData";
