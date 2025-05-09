@@ -1,13 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import stockItemsReducer from "../features/stock/stockItemsSlice";
-import categoriesReducer from "../features/categories/categoriesSlice";
 import recipesReducer from "../features/recipes/recipesSlice";
+import ingredientsReducer from "../features/ingredients/ingredientsSlice";
 import searchReducer from "../features/search/searchSlice";
 
 export default configureStore({
     reducer: {
         allStockItems: stockItemsReducer,
-        allCategories: categoriesReducer,
+        allIngredients: ingredientsReducer,
         allRecipes: recipesReducer,
         search: searchReducer
     },
