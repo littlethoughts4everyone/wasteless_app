@@ -15,6 +15,6 @@ export const recipesSlice = createSlice({
 
 export const selectAllRecipes = (state) => state.allRecipes.recipes;
 export const selectRecipe = (id) => (state) => state.allRecipes.recipes[id];
-export const {addQuiz} = recipesSlice.actions;
+export const {addRecipe} = recipesSlice.actions;
 
 export default recipesSlice.reducer;
