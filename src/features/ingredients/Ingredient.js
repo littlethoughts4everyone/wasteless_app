@@ -10,8 +10,10 @@ export default function Ingredient({id}) {
     };
 
     return (
-        <div className="ingredient-form">
-            
-        </div>
+        <li className="ingredient-container">
+            <p>{ingredient.amount}</p>
+            <p>{ingredient.unit}</p>
+            <p>{ingredient.name}</p>
+        </li>
     )
 }

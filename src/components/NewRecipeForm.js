@@ -1,16 +1,18 @@
 import react, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import {v4 as uuidv4} from "uuid";
 import { RECIPE_CATEGORIES } from "../data/foodData";
 import { addRecipe } from "../features/recipes/recipesSlice";
 import { addIngredient } from "../features/ingredients/ingredientsSlice";
 
 export default function NewRecipeForm() {
-    const dispatch = useDispatch();
     const [name, setName] = useState("");
     const [source, setSource] = useState(""); 
     const [category, setCategory] = useState("");
     const [ingredients, setIngredients] = useState([]);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -34,6 +36,13 @@ export default function NewRecipeForm() {
             category: category,
             ingredientIds: ingredientIds
         }));
+
+        setName("");
+        setSource("");
+        setCategory("");
+        setIngredients([]);
+
+        navigate(`/categories/${category}`);
     };
 
     const addIngredientInputs = (e) => {
@@ -47,7 +56,7 @@ export default function NewRecipeForm() {
 
     const removeIngredient = (e, index) => {
         e.preventDefault();
-        setIngredients(ingredients.filter((ingredient) => ingredient !== index));
+        setIngredients(ingredients.filter((ingredient, i) => i !== index));
     };
 
     const updateIngredientState = (index, property, value) => {
@@ -105,7 +114,7 @@ export default function NewRecipeForm() {
                     </div>
                 ))}
                 <div className="button-container">
-                    <button onCanPlay={addIngredientInputs}>Add Ingredient</button>
+                    <button onClick={addIngredientInputs}>Add Ingredient</button>
                     <button type="submit">Create Recipe</button>
                 </div>
             </form>

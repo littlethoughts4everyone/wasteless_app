@@ -9,6 +9,7 @@ export default function Recipe({id}) {
     return (
         <section>
             <h2 className="recipe-name">{recipe.name}</h2>
+            <p className="recipe-source">{recipe.source}</p>
             <ul className="ingredients-list">
                 {recipe.ingredientIds.map((id) => (
                     <Ingredient key={id} id={id}/>
