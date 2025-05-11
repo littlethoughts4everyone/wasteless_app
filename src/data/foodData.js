@@ -12,39 +12,39 @@ export const FOOD_CATEGORIES = [
 export const RECIPE_CATEGORIES = [
     {
         name: 'Casseroles',
-        id: 'casseroles',
+        id: 'Casseroles',
     },
     {
         name: 'Currys',
-        id: 'currys',
+        id: 'Currys',
     },
     {
         name: 'Meat',
-        id: 'meat',
+        id: 'Meat',
     },
     {
         name: 'Fish',
-        id: 'fish',
+        id: 'Fish',
     },
     {
         name: 'Pasta',
-        id: 'pasta',
+        id: 'Pasta',
     },
     {
         name: 'Pizza',
-        id: 'pizza',
+        id: 'Pizza',
     },
     {
         name: 'Risotto',
-        id: 'risotto',
+        id: 'Risotto',
     },
     {
         name: 'Soupes',
-        id: 'soupes',
+        id: 'Soupes',
     },
     {
         name: 'Appetizer',
-        id: 'appetizer',
+        id: 'Appetizer',
     }
 ];
 
