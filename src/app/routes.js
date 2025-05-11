@@ -1,8 +1,7 @@
 const ROUTES = {
     stockRoute: () => "/stock",
     categoriesRoute: () => "/categories",
-    categoryRoute: (id) => `/category/${id}`,
-    recipesRoute: () => "/recipes",
+    categoryRoute: (id) => `/categories/${id}`,
     addRecipeRoute: () => "/recipe/new",
     searchRoute: () => "/search"
 };
